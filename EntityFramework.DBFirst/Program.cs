@@ -10,6 +10,11 @@ namespace EntityFramework.DBFirst
     {
         static void Main(string[] args)
         {
+            MyDbEntities entities = new MyDbEntities();
+            var items = entities.Names.ToList();
+            foreach (var item in items) {
+                Console.WriteLine("{0}. {1}", item.Id, item.Name1);
+            }
         }
     }
 }
